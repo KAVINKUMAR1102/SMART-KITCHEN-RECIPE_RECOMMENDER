@@ -28,13 +28,7 @@ def header(Q1=None, Q2=None, Q3=None, Q4=None, food_type=None):
     form = st.form("Preference")
 
     with header:        
-        url = requests.get("https://assets1.lottiefiles.com/packages/lf20_p8xtmag7.json")
-        url_json = dict()
-        if url.status_code == 200:
-            url_json = url.json()
-        else:
-            print("Error in the URL")
-
+        
         with form:
             flavor = form.text_input(Q1)
             desired_ingredients = form.text_input(Q2)
